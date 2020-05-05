@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- head 中 -->
+    <link rel="stylesheet" href="css/materialize.min.css">
+
+
+    <title>H5 网页示例</title>
+</head>
+<body style="padding: 20px">
+
+<div class="row">
+
+
+    <div>操作</div>
+    <p>
+        <label>
+            <input type="checkbox" name="aihao" id="music" class="filled-in" checked="checked"/>
+            <span>擦亮所有宝贝</span>
+        </label>
+    </p>
+
+
+
+    <div class="col s6">
+        <button class="btn waves-effect waves-light " type="button" name="action" onclick="javascript:save()">保存参数
+        </button>
+    </div>
+    <div class="col s6">
+        <button class="btn waves-effect waves-light" type="button" name="action" onclick="javascript:window.ec.start()">
+            启动脚本
+        </button>
+    </div>
+</div>
+<script src="htmljs/jquery.min.js"></script>
+<script src="htmljs/materialize.min.js"></script>
+
+
+</body>
+
+
+<script>
+
+
+    //保存参数的函数
+    function save() {
+       // var name = $("#name").val();
+        window.ec.saveConfig("music", $("#music").prop("checked"));
+
+        window.ec.toast("保存成功");
+
+
+    }
+
+</script>
+</html>
